@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BeMEAM">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 1</title>
+</head>
+<body>
+    <form action="#">
+
+        <label for="nome">Nome:
+            <input id="nome" type="text" placeholder="Nome" ng-model="nome">
+        </label>
+        <label for="email">Email:
+            <input id="email" type="text" placeholder="Email" ng-model="email">
+        </label>
+        <label for="telefone">Telefone:
+            <input id="telefone" type="text" placeholder="Telefone" ng-model="telefone">
+        </label>
+
+    </form>
+    <hr>
+    <table>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th> 
+          <th>Telefone</th>
+        </tr>
+        <tr>    
+          <td>{{nome}}</td>
+          <td>{{email}}</td>
+          <td>{{telefone}}</td>
+        </tr>
+    </table>
+
+    <script src="/angular.min.js"></script>
+    <script>
+        angular.module('BeMEAM', [])
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+
+// 1- Explique qual a definição de MVC, MVVM e MVP.
+// MVC: padrão de arquitetura de software, separando sua aplicação em 3 camadas. A camada de interação do usuário(view), a camada de manipulação dos dados(model) e a camada de controle(controller).
+// MVVM: Padrão de design de arquitetura de interface do usuário para desacoplamento da interface do usuário e de código que não é da interface do usuário. ... Esse desacoplamento é um exemplo da separação de preocupações, que é um conceito importante em muitos padrões de design.
+// MVP: Padrão de desenho de interface de usuário projetado para facilitar os testes unitários automatizados e melhorar a separação de interesses em lógica de apresentação: Model é uma interface que define o modelo de dados que será exibido ou alterado na interface do usuário.
+
+// 2- Crie uma aplicação com um nome e um form onde os dados colocados neles sejam mostrados logo abaixo formatados. 
+    
