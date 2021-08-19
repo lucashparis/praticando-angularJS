@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="beMEAN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+
+    <!-- Angular -->
+    <script src="/angular.min.js"></script>
+</head>
+
+<body">
+    <label for="">Qual sua idade?<input type="number" min="1" placeholder="Ex: 13" ng-model="idade"></label>
+    <p>{{idade | validaIdade}}</p>
+</body>
+
+<script>
+    angular.module('beMEAN', [])
+        .filter('validaIdade', function () {
+            return function (idade) {
+                if(idade < 18){
+                    return idade = "Você é Menor de idade!"; 
+
+                } else if (idade >= 18) {
+                    return idade = "Você é Maior de idade!"; 
+
+                }else{
+                    return idade = "Preencha sua idade"; 
+                    
+                }
+            }
+        });
+</script>
+
+</html>
