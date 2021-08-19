@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 1</title>
+
+    <!-- Angular -->
+    <script src="/angular.min.js"></script>
+    
+</head>
+<body ng-app="">
+    <h1>Implementação filter, lowercase, uppercase, orderBy e currency</h1>
+    <div ng-init="friends = [{name:'Breno', phone:'555-1276'},
+                         {name:'Bruno', phone:'800-BIG-MARY'},
+                         {name:'Marcio', phone:'555-4321'},
+                         {name:'Francieli', phone:'555-5678'},
+                         {name:'Rhuan', phone:'555-8765'},
+                         {name:'Angel', phone:'555-5678'}]">
+    </div>
+
+    <label>Busca: <input ng-model="searchText"></label>
+    <table id="searchTextResults">
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+        <tr ng-repeat="friend in friends | filter:searchText | orderBy:'name'">
+            <td>{{friend.name | uppercase}}</td>
+            <td>{{friend.phone | lowercase}}</td>
+        </tr>
+    </table>
+    <hr>
+    <label>Qualquer: <input ng-model="search.$"></label> <br>
+    <label>Apenas Nome <input ng-model="search.name"></label><br>
+    <label>Apenas Telefone <input ng-model="search.phone"></label><br>
+    <label>Igual <input type="checkbox" ng-model="strict"></label><br>
+    <table id="searchObjResults">
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+        <tr ng-repeat="friendObj in friends | filter:search:strict">
+            <td>{{friendObj.name}}</td>
+            <td>{{friendObj.phone}}</td>
+        </tr>
+    </table>
+    <hr>
+
+    <label>Valor do Produto: <input ng-model="valorProduto"></label>
+    <p>O Valor do Produto é: {{valorProduto | currency:"R$"}}</p>
+    
+</body>
+</html>
