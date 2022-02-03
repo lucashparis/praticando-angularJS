@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="beMEAN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+
+    <!-- Angular -->
+    <script src="/angular.min.js"></script>
+</head>
+
+<body>
+    <label>Que horas são?<input type="time" min="0" max="24" placeholder="Ex:13:30" ng-model="hora"></label>
+    <p>{{hora | validaHora}}</p>
+</body>
+<script>
+    angular.module('beMEAN', [])
+        .filter('validaHora', function () {
+            return function (hora) {
+                var d = new Date(hora);
+                var hora = (d.getUTCHours() - 3); 
+                var minuto = (d.getUTCMinutes());
+
+                if (hora > 6 && hora <= 12) {
+                    return "Bom Dia";
+                } else if(hora > 12 && hora <= 18){
+                    return "Boa Tarde";
+                } else {
+                    return "Boa Noite";
+                }
+            }
+        });
+</script>
+
+</html>

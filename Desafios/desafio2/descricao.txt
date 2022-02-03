@@ -3,7 +3,7 @@
 
 2- Crie um fitro novo onde você informa em um input sua idade, e ele diga se você é maior ou menor que 18 anos (utilizando IF);
 
-3- Crie um filtro que receba um horário, entre 0:00 e 23:59, e diga (utilizando Switch):
+3- Crie um filtro que receba um horário, entre 0:00 e 23:59 E DIGA:
 
 Bom dia - 6:01 a 12:00;
 Boa tarde - 12:01 a 18:00;
